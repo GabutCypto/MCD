@@ -95,8 +95,8 @@
         }
 
         .feature-item {
-            display: flex; /* Gunakan Flexbox */
-            align-items: flex-start; /* Agar emoji tetap di atas dan teks sejajar */
+            display: flex;
+            align-items: flex-start;
             justify-content: flex-start;
             font-size: 1rem;
             margin: 8px auto;
@@ -107,7 +107,7 @@
             width: 90%;
             max-width: 500px;
             transition: 0.3s ease-in-out;
-            text-align: left; /* Pastikan teks tidak rata tengah */
+            text-align: left;
         }
 
         .feature-item:hover {
@@ -116,13 +116,13 @@
         }
 
         .feature-item .emoji {
-            flex-shrink: 0; /* Supaya emoji tidak berubah ukuran */
+            flex-shrink: 0;
             font-size: 1.2rem;
         }
 
         .feature-item .feature-text {
-            margin-left: 8px; /* Menjaga teks agar sejajar pada baris kedua */
-            flex: 1; /* Supaya teks bisa lebar penuh */
+            margin-left: 8px;
+            flex: 1;
         }
 
         .bonus {
@@ -130,6 +130,14 @@
             font-size: 1.1rem;
             font-weight: bold;
             color: #FFD700;
+            text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+        }
+
+        .price {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff4747;
             text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
         }
 
@@ -177,10 +185,6 @@
             <span class="feature-text">Optimasi trading dengan bot</span>
         </div>
         <div class="feature-item">
-            <span class="emoji">😎</span>
-            <span class="feature-text">Strategi swing trade dengan satu tool</span>
-        </div>
-        <div class="feature-item">
             <span class="emoji">🔥</span>
             <span class="feature-text">Filtering koin potensial di Dexscreener dengan akurasi tinggi</span>
         </div>
@@ -196,8 +200,13 @@
 
     <div class="bonus">🎯 Bonus: Akses eksklusif ke Signal Meme Coin!</div>
 
-    <div class="cta"> Siap mulai trading yang lebih efektif? </div>
-    <a href="http://lynk.id/gcstro/YWoRVBZ" class="btn">Gabung Sekarang</a>
+    <div class="price">
+        ⏳ Harga hanya <strong>Rp150K</strong> untuk 5 orang tercepat!  
+        <del>Rp4.9jt</del>
+    </div>
+
+    <div class="cta">Siap mulai trading yang lebih efektif? </div>
+    <a href="https://t.me/brobrobrocuan" class="btn">Gabung Sekarang</a>
 
     <div class="footer">
         © 2025 Meme Coin Degen. All Rights Reserved.

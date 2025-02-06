@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran - Meme Coin Degen</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0A0A0A, #1B003B);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+            background: white;
+            color: black;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 50px;
+            border: none;
+            background: #FFD700;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        .submit-btn:hover {
+            background: #FFA500;
+            transform: scale(1.05);
+        }
+
+        .back-btn {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #FFD700;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+        }
+
+        .back-btn:hover {
+            color: #FFA500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Formulir Pendaftaran</h2>
+        <form id="registerForm">
+            <label>Username Telegram:</label>
+            <input type="text" id="telegramUsername" required placeholder="@username">
+
+            <label>Nomor WhatsApp:</label>
+            <input type="text" id="whatsappNumber" required placeholder="+62xxxxxxxxxx">
+
+            <label>Bukti Pembayaran:</label>
+            <input type="file" id="paymentProof" accept="image/*" required>
+        </form>
+
+        <!-- Tombol Kirim Langsung ke Telegram -->
+        <a id="submitButton" class="submit-btn" target="_blank">Kirim</a>
+
+        <a href="index.html" class="back-btn">← Kembali ke Halaman Utama</a>
+    </div>
+
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function(event) {
+            let username = document.getElementById("telegramUsername").value.trim();
+            let whatsapp = document.getElementById("whatsappNumber").value.trim();
+
+            if (username === "" || whatsapp === "") {
+                alert("Harap isi semua data sebelum mengirim.");
+                return;
+            }
+
+            let message = `Halo, saya ingin mendaftar!\n\n👤 Telegram: ${username}\n📞 WhatsApp: ${whatsapp}`;
+            let telegramLink = `https://t.me/brobrobrocuan?text=${encodeURIComponent(message)}`;
+
+            window.open(telegramLink, "_blank");
+        });
+    </script>
+
+</body>
+</html>
